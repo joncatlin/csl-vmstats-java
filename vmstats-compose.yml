@@ -1,0 +1,13 @@
+version: '3.2'
+ 
+services:
+  vmstats:
+    image: joncatlin/vmstats:latest
+    environment:
+    - COUCHBASE_NODES=docker01.dest.internal
+    - STATSD_SERVER=docker01.dest.internal
+    - DIRNAME=/home/files-to-process
+    - FILETYPE=.csv
+    - VMNAME_PATTERN=[vV]{1}-.*
+#    volumes:
+#      - "e:/file-to-process:/home/files-to-process"

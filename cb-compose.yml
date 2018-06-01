@@ -1,0 +1,8 @@
+version: '3.2'
+ 
+services:
+  cb01:
+    image: couchbase
+    network_mode: "host"
+#    volumes:
+#      - "/mount/xvdb1/couchbase:/opt/couchbase/var"
